@@ -1,35 +1,25 @@
-name: Actions CI - Next.js version 12 static site export, GitHub Actions Build and Deploy
+name: Deploy to GitHub Pages
+
 on:
   push:
-    branches: [ master ]
-# 执行的一项或多项任务
+    branches:
+      - main  
+
 jobs:
-  build-and-deploy:
-    # 运行在虚拟机环境ubuntu-latest
-    # https://docs.github.com/zh/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - name: 获取源码   ️
-      uses: actions/checkout@v3
-    - name: Node环境版本  ️
-      uses: actions/setup-node@v3
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
       with:
-        node-version: 18
-    - name: 安装 Pnpm  
-      uses: pnpm/action-setup@v2
-      id: pnpm-install
-      with:
-          version: 7
-          run_install: true
-    - name: 安装依赖 ⚙️
-      run: pnpm install
-    - name: 打包  ️
-      run: |
-        npm run build
-        touch out/.nojekyll
-    - name: 部署  
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        branch: master
-        folder: out
-        clean: true
+        node-version: 16.14.0  
+
+    - name: Install dependencies
+      run: npm install  
+
+    - name: Build
+      run: npm run build  
