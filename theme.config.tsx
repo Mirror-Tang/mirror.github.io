@@ -11,9 +11,9 @@ const config: DocsThemeConfig = {
     };
   },
   project: {
-    link: "https://github.com/latticexyz/mud",
+    link: "https://github.com/Mirror-Tang/Mirror-Tang.github.io",
   },
-  docsRepositoryBase: "https://github.com/latticexyz/mud/tree/main/docs",
+  docsRepositoryBase: "https://github.com/Mirror-Tang/Mirror-Tang.github.io/tree/dev",
   head: (
     <>
       <meta property="title" content="Salus documentation" />
