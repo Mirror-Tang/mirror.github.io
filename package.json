@@ -1,28 +1,22 @@
 {
-  "name": "docs",
-  "version": "1.0.0",
-  "private": true,
-  "description": "mud.dev docs",
-  "license": "",
-  "type": "module",
-  "main": "index.js",
+  "name": "Salus-Docs",
+  "version": "0.0.1",
+  "description": "Salus docs",
   "scripts": {
-    "build": "next build",
     "dev": "next dev",
-    "export": "next export",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
-    "next": "^13.3.0",
-    "nextra": "^2.10.0",
-    "nextra-theme-docs": "^2.10.0",
+    "next": "^13.0.6",
+    "nextra": "latest",
+    "nextra-theme-docs": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "18.11.10",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "typescript": "5.1.6"
+    "gh-pages": "^6.0.0",
+    "typescript": "^4.9.3"
   }
 }

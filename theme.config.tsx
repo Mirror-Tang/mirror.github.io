@@ -1,5 +1,5 @@
 import { DocsThemeConfig } from "nextra-theme-docs";
-import NavLogo from "./components/NavLogo";
+import NavLogo from "./components/NvaLogo";
 import { useRouter } from "next/router";
 
 const config: DocsThemeConfig = {
@@ -13,7 +13,7 @@ const config: DocsThemeConfig = {
   project: {
     link: "https://github.com/Mirror-Tang/Mirror-Tang.github.io",
   },
-  docsRepositoryBase: "https://github.com/Mirror-Tang/Mirror-Tang.github.io/tree/dev",
+  docsRepositoryBase: "https://github.com/Mirror-Tang/Mirror-Tang.github.io/tree/master",
   head: (
     <>
       <meta property="title" content="Salus documentation" />
